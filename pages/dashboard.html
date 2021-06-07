@@ -308,7 +308,7 @@ var bounds = [
 ];
 
 // Link csv evakuasi
-var url = "https://raw.githubusercontent.com/mhanifsp/geogeo/master/BALAIRUNGUGM_arah_all.csv";
+var url = "https://raw.githubusercontent.com/3dindoormapgedungpusatugm/BalairungUGM/main/Jalur%20Evakuasi.csv";
 
 // Semua data csv masuk ke sini
 var csvData = new Array();
@@ -490,7 +490,7 @@ function showTrack(startId) {
         [x4,y4,z4] --> index 3 (T4)
         ...   --> Data
         ...   --> dari
-        ...   --> startpoint id 2 ke 3  dan startpooint 3 ke 4
+        ...   --> startpoint id 2 ke 3  dan startpoint 3 ke 4
      ]
      
      Isi titiktrack2 :
@@ -606,7 +606,7 @@ function showTrack(startId) {
 
   var fiturs1 = []
   var num = 0;
-  // Untuk tiap koordinat di variable titikTrack
+  // Untuk tiap koordinat di variabel titikTrack
   for (var coord of titikTrack1) {
     // num untuk indexing
     num++;
@@ -628,7 +628,7 @@ function showTrack(startId) {
       },
       properties: {
         id: num,
-        // Ambil ketinggain dari koordinat (index 2 = z)
+        // Ambil ketinggian dari koordinat (index 2 = z)
         tinggi_das : parseFloat(coord[2]),
         ketinggian : parseFloat(coord[2]) + 0.25
       }
@@ -851,7 +851,7 @@ function showTrack(startId) {
         // show lantai tersebut
         showOneLantaiOnly(lantaiNow.toString())
         
-        // Kalo lantai 1
+        // Kalau lantai 1
         if (lantaiNow == 1) {
         	//koordinat data orang dipasang persis sama seperti kotak yang sedang dipijak
           dataOrang = [fiturs1[jalurOrang[i][1]]];
@@ -919,11 +919,11 @@ function showTrack(startId) {
           "features": dataOrang
         });
 				
-        // i nambah 1, ulangi sampe i = jumlah data di dataOrang
+        // i tambah 1, ulangi sampai i = jumlah data di dataOrang
         i++;
       } 
       
-      // Kalo i > jumlahdataOrang
+      // Kalau i > jumlahdataOrang
       else {
       	// clear interval
         window.clearInterval(timer);
@@ -1146,7 +1146,7 @@ for (var i = 0; i < 3; i++) {
 // Add lantai button ------------- end ----------------
 
 
-// onClick bangunan (keluar popup) ------ start --------
+// onClick bangunan (keluar pop up) ------ start --------
 map.on('click', 'Lantai 1', function(e) {
 	// Hanya muncul jika lantai 2 dan 3 dimatikan
   if (document.getElementById("btn-lantai-2").className == '' && document.getElementById("btn-lantai-3").className == '') {
