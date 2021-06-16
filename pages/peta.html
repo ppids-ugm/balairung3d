@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Peta dalam Ruangan 3D Gedung Pusat UGM</title>
+  <title>Peta Ruangan 3D Gedung Pusat UGM</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
@@ -1200,7 +1200,7 @@
           // Memunculkan pop up yang ada buttonnya
           popup = new mapboxgl.Popup()
             .setLngLat(e.lngLat)
-            .setHTML("<p style=\"margin: auto;\">" + e.features[0].properties.nama_fitur + "</p><br><button id=\"evacuateBtn\" onClick=\"javascript:evacuate()\" style=\"margin: auto;\"> Evakuasi </button>")
+            .setHTML("<p style=\"margin: auto;\">" + e.features[0].properties.nama_fitur +"</p><br><button id=\"evacuateBtn\" onClick=\"javascript:evacuate()\" style=\"margin: auto;\"> Evakuasi </button>")
             .addTo(map);
         }
         else { // Kalau id jalurnya 1000
