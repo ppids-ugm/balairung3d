@@ -293,12 +293,13 @@ left:80px;
 
 <!-- page script -->
 <script>
+  const urlPdf = `${window.origin}/docs/Petunjuk Penggunaan.pdf`;
  document.addEventListener("adobe_dc_view_sdk.ready", function()
     {
         var adobeDCView = new AdobeDC.View({clientId: "e38e227c4c9c47f596acfd22efe66909", divId: "pdf"});
         adobeDCView.previewFile(
        {
-          content:   {location: {url: "http://indoor3dmapgedungpusatugm.herokuapp.com/docs/Petunjuk Penggunaan.pdf"}},
+          content:   {location: {url: urlPdf}},
           metaData: {fileName: "Petunjuk Penggunaan.pdf"}
        });
     });
